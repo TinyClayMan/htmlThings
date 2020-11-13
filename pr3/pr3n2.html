@@ -1,0 +1,334 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Pr3n2</title>
+		<style>
+			.tran {
+				box-shadow: 7px 0px 0px 2px #ebebeb, -7px 0px 0px  1px #aaaaaa, 0px 7px 0px 1px #ff0000, 0px -7px 0px 1px #0000ff;
+				transition: 3s;
+			}
+			.tran:hover {
+				box-shadow: -7px 0px 0px 2px #ebebeb, 9px 0px 2px  1px #aaaaaa, 0px -9px 0px 1px #ff0000, 0px 6px 1px 1px #0000ff;
+			}
+			
+			div.textclass {
+				box-shadow: 7px 7px 5px rgba(0,0,0,0.6); /* Тень */
+				padding: 10px; /* Поля вокруг текста */
+				border-radius: 10px; /* Радиус скругления */
+				background: #eeece0; /* Цвет фона */
+			 }
+			 
+			 div.diagramRound {
+				background: #ECF5E4;
+				width: 100px; height: 100px;
+				text-align: center;
+				font: 40px/100px Times, serif;
+				border: 24px solid #95CD8B;
+				border-right: 24px solid #D0E6BB;
+				border-radius: 100px;
+			 }
+			 
+			.chess-board { border-spacing: 0; border-collapse: collapse; }
+            .chess-board th { padding: .5em; }
+            .chess-board td { border: 1px solid; width: 2em; height: 2em; }
+            .chess-board .light { background: #eee; }
+            .chess-board .dark { background: #000; }
+			
+			.wrapper {
+				margin: 40px;
+				font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			}
+
+			form {
+				background: #FFFFFF;
+				min-width: 380px;
+			}
+
+			.form-top {
+				padding: 30px 25px 0 25px;	
+				border: 2px solid #E1E5E6;
+				border-radius: 5px
+			}
+
+			.form-bottom {
+				margin-top: 10px;
+				background: #E3E3E3;
+				padding: 15px 0;
+				border-radius: 10px;
+			}
+
+			.form-bottom input {
+				padding: 10px 0;
+				background: -webkit-linear-gradient(266deg, rgba(0,225,0,1) 0%, rgba(0,143,0,1) 100%);
+				background: -o-linear-gradient(266deg, rgba(0,225,0,1) 0%, rgba(0,143,0,1) 100%);
+				background: linear-gradient(356deg, rgba(0,225,0,1) 0%, rgba(0,143,0,1) 100%);
+				color: #FFFFFF;
+				border: none;
+				border-radius: 30px;
+				margin-left: 150px;
+				cursor: pointer;
+				font-size: 1.2em;
+			}
+
+			input {
+				width: 250px;
+			}
+
+			.data1, .data2, .data3 {
+				width: 380px;
+				margin-bottom: 40px;
+			}
+
+			.data3 {
+				margin: 0;
+			}
+
+			.dataLine,
+			.data3_2 {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 10px;
+				align-items: center;
+				position: relative;
+			}
+
+			.data3_2 span img {
+				width: 100px;
+				height: 50px;
+			}
+
+			.required {
+				display: inline-block;
+				height: 8px;
+				width: 8px;
+				position: absolute;
+				right: 390px;
+				background: url(https://loading.io/s/icon/m7u6e.svg) 0 0 no-repeat;
+			}
+
+			input[required]:valid + label,
+			.data3_2 input[required]:valid ~ label {
+				background: url(https://upload.wikimedia.org/wikipedia/commons/0/0d/Google_Material_Design_check.svg) 0 0 no-repeat;
+			}
+
+			.data3_2 input[required]:valid ~ span {
+				display: none;
+			}
+			
+			.square {
+				border: 5px solid red;
+				position: relative;
+				width: 25%;
+			}
+
+			.square:after {
+				content: '';
+				display: block;
+				padding-bottom: 25%;
+			}
+
+			.content {
+				position: absolute;
+				text-align: center;
+				transform: translate(0%, 50%);
+				width: 100%;
+				height: 100%;
+			}
+			
+			input[type="checkbox"]:checked + span { background: #fc0; }
+			span { padding: 0 5px; }
+		</style>
+	</head>
+
+	<body>
+		<img class="tran" src="img.jpeg"></img>
+		<hr />
+		<div class="textclass">
+			<p style="margin-left: 10%">Не идти против знамён противника, когда они в полном порядке;  не нападать на стан противника, когда он неприступен; это и есть управление изменениями.</p>
+			<p>Сунь-цзы, пер. Николай Конрад</p>
+		</div>
+		<hr />
+		<p>
+			<ol>
+				<li>&spades; &clubs; &hearts; &diams;</li> <!--Масти-->
+				<li>&alpha; &beta; &gamma; &delta; &epsilon;</li> <!--Греческие символы-->
+				<li>&pound; &cent; &#8381; &yen; &euro; &#36;</li> <!--Валюты-->
+				<li>&copy; &reg; &trade;</li> <!--Правовые знаки-->
+				<li>&frac14; &frac12; &frac34;</li> <!--Дроби-->
+				<li>&para; &sect; &ndash; &mdash;</li> <!--Типографические знаки-->
+				<li>&iquest; &amp; &permil; &bull; &micro;</li> <!--Полезные знаки на свой выбор-->
+			</ol>
+		</p>
+		<hr />
+		<table class="chess-board">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>d</th>
+                    <th>e</th>
+                    <th>f</th>
+                    <th>g</th>
+                    <th>h</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                    <td class="dark"></td>
+                    <td class="light"></td>
+                </tr>
+            </tbody>
+        </table>
+		<hr />
+		<div class="diagramRound">
+			75<span>%</span>
+		</div>
+		<hr />
+		<div class="wrapper">
+			 <form action="">
+				<div class="form-top">
+			    	<div class="data1">
+						<div class="dataLine">
+							<label for="name">Имя пользователя</label><input type="text" required><label class="required"></label>
+						</div>
+						<div class="data3">
+							<div class="data3_2">
+								<label for="name">Сколько вам лет?</label><input type="number" required>
+								<label class="required"></label>
+							</div>
+						</div>	
+						<div class="dataLine">
+							<label for="surname">Вы учитесь или работаете?</label><input type="text" required><label class="required"></label>
+						</div>
+						<div class="dataLine">
+							<label for="name">Сколько у вас свободного времени?</label><input type="text" required><label class="required"></label>
+						</div>
+						<div class="dataLine">
+							<label for="name">Что вы обычно делаете в свободное время?</label><input type="text"></label>
+						</div>
+					</div>			
+				</div>		
+				<br />
+				<div class="signInButton"><button style="margin-left: 300px">Отправить</button></div>	
+			 </form>
+		</div>
+		<hr />
+		<div class="square">
+			<div class="content">
+				Content
+			</div>
+		</div>
+		<hr />
+		<form>
+			<table cellspacing="0" cellpadding="5">
+				<tr>
+					<td vertical-align="top">
+						<p><label><input type="checkbox" name="sortament" value="1"> 
+							<span>HTML</span></label>
+						</p>
+						<p><label><input type="checkbox" name="sortament" value="2"> 
+							<span>CSS</span></label>
+						</p>
+						<p><label><input type="checkbox" name="sortament" value="3"> 
+							<span>JS</span></label>
+						</p>
+						<p><label><input type="checkbox" name="sortament" value="4"> 
+							<span>U</span></label>
+						</p>
+					</td>
+					<td vertical-align="top">
+						<p style=""><input type="submit" value="Отправить"></p>
+					</td>
+				</tr>
+			</table>
+		 </form>
+	</body>
+</html>
