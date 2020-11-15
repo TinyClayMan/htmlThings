@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Title</title>
+		<link rel="stylesheet" type="text/css" href="pr4n10.css">
+		<style>
+			button {
+				box-shadow: inset 7px 7px 5px red;
+			}
+			
+			.rotate:active {
+				transform: rotate(30deg);
+			}
+		   .b2:active {
+				position: center;
+				height: 100px; width: 100px;
+				background: purple;
+				border-bottom: 20px solid gray;
+				top: -100px;
+				/* Анимация */
+				transition-property: top;
+				transition-duration: 5s;
+			  }
+			.b2:active { top: 0; }		
+			
+		   .b3:active {
+				height: 40px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				transition: 0.3s ease-in-out all;
+				transform-origin: 50% 0;
+				transform-style: preserve-3d;
+				background-color: black;
+				color: white;
+				width: 100px;
+			  }
+			.b3:active { top: 0; }			
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<ul class="topmenu">
+				<li><a href="">Home</a></li>
+				<li><a href="">Shop</a></li>
+				<li><a href="">Blog</a>
+				<ul class="submenu">
+					<li><a href="">Category</a></li>
+					<li><a href="">Author</a></li>
+					<li><a href="">Archive</a></li>
+					<li><a href="">Tags</a></li>
+				</ul>
+				</li>
+				<li><a href="">Portfolio</a>
+				<ul class="submenu">
+					<li><a href="">Category</a></li>
+					<li><a href="">Author</a></li>
+					<li><a href="">Archive</a></li>
+					<li><a href="">Tags</a></li>
+				</ul>
+				</li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

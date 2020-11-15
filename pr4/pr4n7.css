@@ -1,0 +1,70 @@
+body{
+	font-family: Arial;
+}
+
+.upper_part{
+	 display: flex;
+	 flex-direction: row;
+}
+.header_strong_pogoda{
+	font-size: 160%;
+	margin: 10px;
+}
+.detailed{
+	background: #eceef2;
+	border-radius: 20px;
+	font-size: 80%;
+	margin: 10px;
+	padding: 0.5%;
+}
+
+.weather{
+	display: block;
+	padding: 10px;
+	margin: 2px;
+	width: 10%;
+	border-radius: 4px;
+	position: relative;
+}
+
+.weather:hover{
+	outline: 2px solid rgb(3, 1, 0);
+}
+
+.week-day{
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.weekend {
+	color: #f66049;
+}
+
+.date {
+	color: #939cb0;
+	font-size: 90%;
+}
+
+.daytime{
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.nighttime{
+	font-size: 80%;
+}
+
+.condition{
+	padding-top: 5px;
+	font-size: 80%
+}
+
+.all_in{
+	display: flex;
+	flex-direction: row;
+}
+
+.thumb {
+	width: 48px;
+	height: 48px;
+}
