@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>Текст абзаца.</p>
+	<p>Текст абзаца.</p>
+	<p>Текст абзаца.</p>
+	<input type="submit" onclick="func()">
+	<script type="text/javascript">
+		function func(){
+			var elems = document.getElementsByTagName('p');
+			elems[0].innerHTML += 'поменяться'; 
+			elems[1].innerHTML += 'измениться'; 
+		}
+	</script>
+</body>
+</html>
